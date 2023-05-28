@@ -31,7 +31,7 @@ require("./app/routes/task.route")(app)
 require("./app/routes/user.route")(app)
 
 
-app.get("/user", (req, res) => {
+app.get("/", (req, res) => {
     res.json({
         message: "Welcome to the Todolist app"
     })
