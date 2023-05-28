@@ -33,7 +33,7 @@ require("./app/routes/user.route")(app)
 
 app.get("/", (req, res) => {
     res.json({
-        message: "Welcome to the Todolist app"
+        message: "Welcome to Todolist app, created by alvian nugroho :D"
     })
 });
 
