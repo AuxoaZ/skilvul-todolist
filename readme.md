@@ -103,17 +103,15 @@ link : https://skilvul-todolist-production.up.railway.app/
 
         Example:
 
-        ```json
-
+    ```json
     {
-
-        "email": "vian@gmail.com",
-        "password": "$2a$10$CwmSjwbYxy7P2ouHwHESqOSsD/Pi5ziNYtYS8hCpwTKgeT.GcPdrW",
-        "tasks": [],
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQ3MTdhOWE4MTQ4NWM4NDdlNWVjYjM2IiwiZW1haWwiOiJ2aWFuQGdtYWlsLmNvbSIsImlhdCI6MTY4NTM3MTA5OCwiZXhwIjoxNjg1Mzc4Mjk4fQ.J8PV78keJxSg8UG6a2py8pq0DXG9mNt_6BFaCgsRSa0",
-        "id": "64717a9a81485c847e5ecb36"
-
+      "email": "vian@gmail.com",
+      "password": "$2a$10$CwmSjwbYxy7P2ouHwHESqOSsD/Pi5ziNYtYS8hCpwTKgeT.GcPdrW",
+      "tasks": [],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQ3MTdhOWE4MTQ4NWM4NDdlNWVjYjM2IiwiZW1haWwiOiJ2aWFuQGdtYWlsLmNvbSIsImlhdCI6MTY4NTM3MTA5OCwiZXhwIjoxNjg1Mzc4Mjk4fQ.J8PV78keJxSg8UG6a2py8pq0DXG9mNt_6BFaCgsRSa0",
+      "id": "64717a9a81485c847e5ecb36"
     }
+    ```
 
     ```
 
@@ -172,13 +170,10 @@ link : https://skilvul-todolist-production.up.railway.app/
             Example:
 
         ```json
-
         {
         "message": "berhasil hapus data",
 
     }
-
-        ```
 
         ```
 
@@ -274,8 +269,6 @@ link : https://skilvul-todolist-production.up.railway.app/
 
         ```
 
-        ```
-
   - Error: `400 BAD REQUEST` || `403 FOEBIDDEN` || `401 UNAUTHORIZED` || `500 INTERNAL SERVER ERROR`
 
     Example:
@@ -335,31 +328,32 @@ link : https://skilvul-todolist-production.up.railway.app/
 
         ```json
 
-    {
-    "message": "data berhasil ditampilkan",
-    "result": {
-    "email": "vian@gmail.com",
-    "password": "$2a$10$jzlJz/n5JTpRu8NopZy2Nee/lbGymOCc2Q5ah.dkbltc1kzmwGN.q",
-    "tasks": [
-    {
-    "_id": "647591421536cd5c373339ca",
-    "task_name": "baca manga",
-    "description": "ashaushduhd",
-    "status": "completed",
-    "deadline": "2023-02-02T00:00:00.000Z",
-    "__v": 0
-    },
-    {
-    "_id": "647591a043271132aad45d26",
-    "task_name": "baca buku",
-    "description": "ashaushduhd",
-    "status": "completed",
-    "deadline": "2023-02-02T00:00:00.000Z",
-    "__v": 0
-    }
-    ],
-    "id": "64758f3e5da197f3cacd0cb4"
-    }
+        {
+          "message": "data berhasil ditampilkan",
+          "result": {
+          "email": "vian@gmail.com",
+          "password": "$2a$10$jzlJz/n5JTpRu8NopZy2Nee/lbGymOCc2Q5ah.dkbltc1kzmwGN.q",
+          "tasks": [
+          {
+          "_id": "647591421536cd5c373339ca",
+          "task_name": "baca manga",
+          "description": "ashaushduhd",
+          "status": "completed",
+          "deadline": "2023-02-02T00:00:00.000Z",
+          "__v": 0
+          },
+          {
+          "_id": "647591a043271132aad45d26",
+          "task_name": "baca buku",
+          "description": "ashaushduhd",
+          "status": "completed",
+          "deadline": "2023-02-02T00:00:00.000Z",
+          "__v": 0
+          }
+          ],
+          "id": "64758f3e5da197f3cacd0cb4"
+          }
+
     }
 
     ```
@@ -416,18 +410,17 @@ link : https://skilvul-todolist-production.up.railway.app/
 
         ```json
         {
-
-    "message": "berhasil menambah data",
-    "result": {
-    "email": "vian@gmail.com",
-    "password": "$2a$10$jzlJz/n5JTpRu8NopZy2Nee/lbGymOCc2Q5ah.dkbltc1kzmwGN.q",
-    "tasks": [
-    "647591421536cd5c373339ca",
-    "647591a043271132aad45d26"
-    ],
-    "id": "64758f3e5da197f3cacd0cb4"
-    }
-    }
+            "message": "berhasil menambah data",
+            "result": {
+            "email": "vian@gmail.com",
+            "password": "$2a$10$jzlJz/n5JTpRu8NopZy2Nee/lbGymOCc2Q5ah.dkbltc1kzmwGN.q",
+            "tasks": [
+            "647591421536cd5c373339ca",
+            "647591a043271132aad45d26"
+            ],
+            "id": "64758f3e5da197f3cacd0cb4"
+            }
+        }
 
     ```
 
@@ -519,16 +512,16 @@ link : https://skilvul-todolist-production.up.railway.app/
 
         ```json
 
-    {
-    "message": "data berhasil ditampilkan",
-    "result": {
-    "task_name": "baca manga",
-    "description": "ashaushduhd",
-    "status": "completed",
-    "deadline": "2023-02-02T00:00:00.000Z",
-    "id": "647591421536cd5c373339ca"
-    }
-    }
+        {
+          "message": "data berhasil ditampilkan",
+          "result": {
+          "task_name": "baca manga",
+          "description": "ashaushduhd",
+          "status": "completed",
+          "deadline": "2023-02-02T00:00:00.000Z",
+          "id": "647591421536cd5c373339ca"
+          }
+        }
 
     ```
 
@@ -589,16 +582,17 @@ link : https://skilvul-todolist-production.up.railway.app/
         ```json
         {
 
-    "message": "data berhasil diubah",
-    "result": {
-    "email": "vian@gmail.com",
-    "password": "$2a$10$jzlJz/n5JTpRu8NopZy2Nee/lbGymOCc2Q5ah.dkbltc1kzmwGN.q",
-    "tasks": [
-    "647591421536cd5c373339ca",
-    "647591a043271132aad45d26"
-    ],
-    "id": "64758f3e5da197f3cacd0cb4"
-    }
+          "message": "data berhasil diubah",
+          "result": {
+          "email": "vian@gmail.com",
+          "password": "$2a$10$jzlJz/n5JTpRu8NopZy2Nee/lbGymOCc2Q5ah.dkbltc1kzmwGN.q",
+          "tasks": [
+          "647591421536cd5c373339ca",
+          "647591a043271132aad45d26"
+          ],
+          "id": "64758f3e5da197f3cacd0cb4"
+          }
+
     }
 
     ```
