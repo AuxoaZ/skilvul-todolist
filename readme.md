@@ -113,10 +113,6 @@ link : https://skilvul-todolist-production.up.railway.app/
     }
     ```
 
-    ```
-
-    ```
-
   - Error: `400 BAD REQUEST` || `500 INTERNAL SERVER ERROR`
 
     Example:
@@ -167,14 +163,12 @@ link : https://skilvul-todolist-production.up.railway.app/
 
   - Success: `204 NO CONTENT`
 
-            Example:
+        Example:
 
         ```json
         {
-        "message": "berhasil hapus data",
-
-    }
-
+        "message": "berhasil hapus data"
+        }
         ```
 
   - Error: `400 BAD REQUEST` || `403 FOEBIDDEN` || `401 UNAUTHORIZED` || `404 NOT FOUND` || `500 INTERNAL SERVER ERROR`
@@ -254,8 +248,7 @@ link : https://skilvul-todolist-production.up.railway.app/
 
             Example:
 
-            ```json
-
+    ```json
         {
         "message": "berhasil update data",
         "result": {
@@ -263,11 +256,9 @@ link : https://skilvul-todolist-production.up.railway.app/
           "password": "$2a$10$zmDW/OQvhxH2wVEjDdeSjO7iyNSQH/URGVKLIL5y808kq5LUXOXl6",
           "tasks": [],
           "id": "647587c4f3faeb45adfd8d5d"
-
+          }
     }
-    }
-
-        ```
+     ```
 
   - Error: `400 BAD REQUEST` || `403 FOEBIDDEN` || `401 UNAUTHORIZED` || `500 INTERNAL SERVER ERROR`
 
@@ -327,7 +318,6 @@ link : https://skilvul-todolist-production.up.railway.app/
         Example:
 
         ```json
-
         {
           "message": "data berhasil ditampilkan",
           "result": {
@@ -353,11 +343,7 @@ link : https://skilvul-todolist-production.up.railway.app/
           ],
           "id": "64758f3e5da197f3cacd0cb4"
           }
-
     }
-
-    ```
-
     ```
 
   - Error: `403 FORBIDDEN` || `401 UNAUTHORIZED` || `500 INTERNAL SERVER ERROR`
@@ -421,10 +407,7 @@ link : https://skilvul-todolist-production.up.railway.app/
             "id": "64758f3e5da197f3cacd0cb4"
             }
         }
-
-    ```
-
-    ```
+        ```
 
   - Error: `403 FORBIDDEN` || `401 UNAUTHORIZED` || `500 INTERNAL SERVER ERROR`
 
@@ -511,7 +494,6 @@ link : https://skilvul-todolist-production.up.railway.app/
         Example:
 
         ```json
-
         {
           "message": "data berhasil ditampilkan",
           "result": {
@@ -523,9 +505,7 @@ link : https://skilvul-todolist-production.up.railway.app/
           }
         }
 
-    ```
-
-    ```
+        ```
 
 - Error: `403 FORBIDDEN` || `401 UNAUTHORIZED` || `500 INTERNAL SERVER ERROR`
 
@@ -550,10 +530,6 @@ link : https://skilvul-todolist-production.up.railway.app/
     "message": "Terjadi kesalahan server!",
     "error": <error message>,
   }
-  ```
-
-  ```
-
   ```
 
 ### 8. **Update Task**
@@ -593,11 +569,8 @@ link : https://skilvul-todolist-production.up.railway.app/
           "id": "64758f3e5da197f3cacd0cb4"
           }
 
-    }
-
-    ```
-
-    ```
+        }
+        ```
 
   - Error: `403 FORBIDDEN` || `401 UNAUTHORIZED` || `500 INTERNAL SERVER ERROR`
 
