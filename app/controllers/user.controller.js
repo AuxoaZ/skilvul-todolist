@@ -14,16 +14,16 @@ exports.create = async (req, res) => {
 
         // Validate user input
         if (!(email && password)) {
-            res.status(400).send("All input is required");
+            res.status(400).send("semua kolom harus diinput!");
         }
 
         // check if user already exist
         // Validate if user exist in our database
-        // const oldUser = await User.findOne({ email });
+        const oldUser = await User.findOne({ email });
 
-        // if (oldUser) {
-        //     return res.status(409).send("User Already Exist. Please Login");
-        // }
+        if (oldUser) {
+            return res.status(409).send("email sudah terdaftar, coba email lain!");
+        }
 
         //Encrypt user password
         const encryptedPassword = await bcrypt.hash(password, 10);
@@ -47,9 +47,9 @@ exports.create = async (req, res) => {
         userDb.token = token;
 
         // return new userDb
-        res.status(201).json(userDb);
+        res.status(201).send({ message: "akun berhasil dibuat, silakan login" });
     } catch (err) {
-        console.log(err);
+        res.status(500).send({ error: err.message, message: "terjadi kesalahan server!" })
     }
 
 }
@@ -62,7 +62,7 @@ exports.login = async (req, res) => {
         const password = req.body.password;
         // Validate user input
         if (!(email && password)) {
-            res.status(400).send("All input is required");
+            res.status(400).send("semua kolom harus diinput!");
         }
         // Validate if user exist in our database
         const user = await User.findOne({ email });
@@ -83,38 +83,24 @@ exports.login = async (req, res) => {
             // user
             res.status(200).json(user);
         }
-        res.status(400).send("Invalid Credentials");
+        res.status(400).send("email atau password salah!");
     } catch (err) {
-        console.log(err);
+        res.status(500).send({ error: err.message, message: "terjadi kesalahan server!" })
     }
 }
 
-// get semua  user
-exports.findAll = (req, res) => {
-    User.find()
-        .then((data) => res.send(data))
-        .catch(err => res.status(500).send({ message: err.message }))
-}
 
 // get user by id
 exports.show = (req, res) => {
-    let id = req.params.id;
+    let id = req.params.user_id;
     User.findById(id)
-        .then((data) => res.send(data))
-        .catch(err => res.status(500).send({ message: err.message }))
-}
-
-// get user by id and show task
-exports.showTaskUser = (req, res) => {
-    let id = req.params.id;
-    User.findById(id).populate("tasks")
         .then((data) => res.send(data))
         .catch(err => res.status(500).send({ message: err.message }))
 }
 
 // update user
 exports.update = (req, res) => {
-    let id = req.params.id;
+    let id = req.params.user_id;
     req.deadline = new Date(req.deadline)
 
     User.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
@@ -122,7 +108,11 @@ exports.update = (req, res) => {
             if (!data) {
                 res.status(404).send({ message: "gagal update data" })
             }
-            res.send({ message: "berhasil update data" })
+            const results = {
+                message: "berhasil update data",
+                result: data
+            }
+            res.send(results)
         })
         .catch(err => res.status(500).send({ message: err.message }))
 
@@ -130,14 +120,14 @@ exports.update = (req, res) => {
 
 // delete
 exports.deleteById = (req, res) => {
-    let id = req.params.id;
+    let id = req.params.user_id;
 
     User.findByIdAndRemove(id)
         .then(data => {
             if (!data) {
                 res.status(404).send({ message: "gagal hapus data" })
             }
-            res.send({ message: "berhasil hapus data" })
+            res.status(204).send({ message: "berhasil hapus data" })
         })
         .catch(err => res.status(500).send({ message: err.message }))
 }

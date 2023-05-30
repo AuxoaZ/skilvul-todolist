@@ -8,12 +8,9 @@ module.exports = app => {
     route.post("/register", user.create);
     route.post("/login", user.login);
 
-    route.get("/", auth, user.findAll);
-    route.get("/:id", auth, user.show);
-    route.get("/:id/tasks", auth, user.showTaskUser);
-
-    route.put("/:id", auth, user.update);
-    route.delete("/:id", auth, user.deleteById);
+    route.get("/:user_id", auth, user.show);
+    route.put("/:user_id", auth, user.update);
+    route.delete("/:user_id", auth, user.deleteById);
 
 
     app.use("/users", route);
